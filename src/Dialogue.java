@@ -8,6 +8,17 @@ public class Dialogue {
         Scanner input = new Scanner(System.in);
         String choice = input.nextLine();
         return choice;
+    }
 
+    public static String suggestClasses(){
+        
+    }
+
+    public static String suggestMajors(){
+        
+    }
+
+    public static String suggestResources(){
+        
     }
 }
