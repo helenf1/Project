@@ -57,6 +57,7 @@ public class SuggestClasses {
         System.out.println("MATH151: Calculus and Analytic Geometry");
         System.out.println("CHEM101: Principles of Chemistry 1");
         System.out.println("BIO141: Foundations of Biology: Cells, Energy, & Org.");
+
     }
 
 
