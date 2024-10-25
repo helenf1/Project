@@ -27,62 +27,36 @@ public class Engineering {
         }
     }
 
-    public static void chemTraditional() {
+    public static void chemFourYearPlan(String year1Add, String year2Add, String year3Add, String year4Add){
         System.out.println("Here is your 4 Year Plan!");
         for (String s : chemYear1) {
             System.out.print(" " + s);
         }
+        System.out.print(year1Add);
         for (String s : chemYear2) {
             System.out.print(" " + s);
         }
-        System.out.print(" CHEM351L\n");
+        System.out.print(year2Add);
         for (String s : chemYear3) {
             System.out.print(" " + s);
         }
-        System.out.print(" CHEM301 CHEM311L CHEM302\n");
+        System.out.print(year3Add);
         for (String s : chemYear4) {
             System.out.print(" " + s);
         }
-        System.out.print(" ENCH437L\n");
+        System.out.print(year4Add);
+    }
+
+    public static void chemTraditional() {
+        chemFourYearPlan(" ENME110\n"," CHEM351L\n"," CHEM301 CHEM311L CHEM302\n"," ENCH437L\n");
     }
 
     public static void chemBiotech() {
-        System.out.println("Here is your 4 Year Plan!");
-        for (int i = 0; i < (chemYear1.length-1); i++) {
-            System.out.print(" " + chemYear1[i]);
-        }
-        System.out.print(" BIOL141\n");
-        for (String s : chemYear2) {
-            System.out.print(" " + s);
-        }
-        System.out.print("BIOL303 CHEM352\n");
-        for (String s : chemYear3) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" CHEM437 CHEM303\n");
-        for (String s : chemYear4) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" ENCH482 ENCH485L\n");
+        chemFourYearPlan(" BIOL141\n"," BIOL303 CHEM352\n", " CHEM437 CHEM303\n"," ENCH482 ENCH485L\n");
     }
 
     public static void chemEnvironmental() {
-        System.out.println("Here is your 4 Year Plan!");
-        for (String s : chemYear1) {
-            System.out.print(" " + s);
-        }
-        for (String s : chemYear2) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" ENCH2101 CHEM352\n");
-        for (String s : chemYear3) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" ENCH410 CHEM303\n");
-        for (String s : chemYear4) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" ENCH437L ENCH414 ENCH412\n");
+        chemFourYearPlan(" ENME110\n"," ENCH2101 CHEM352\n"," ENCH410 CHEM303\n"," ENCH437L ENCH414 ENCH412\n");
     }
 
     public static void computer() {
@@ -95,59 +69,34 @@ public class Engineering {
             case 3 -> computerCybersecurity();
         }
     }
-    public static void computerElecSyst() {
+    public static void compFourYearPlan(String year1Add, String year2Add, String year3Add, String year4Add){
         System.out.println("Here is your 4 Year Plan!");
         for (String s : compYear1) {
             System.out.print(" " + s);
         }
+        System.out.print(year1Add);
         for (String s : compYear2) {
             System.out.print(" " + s);
         }
-        System.out.print(" CHEM351L\n");
+        System.out.print(year2Add);
         for (String s : compYear3) {
             System.out.print(" " + s);
         }
-        System.out.print(" CMSC421 CMPE415\n");
+        System.out.print(year3Add);
         for (String s : compYear4) {
             System.out.print(" " + s);
         }
-        System.out.print(" CMSC421 CMPE315\n");
+        System.out.print(year4Add);
+    }
+
+    public static void computerElecSyst() {
+        compFourYearPlan("\n","\n"," CMSC421 CMPE415\n"," CMSC421 CMPE315\n");
     }
     public static void computerCommunications() {
-        System.out.println("Here is your 4 Year Plan!");
-        for (String s : compYear1) {
-            System.out.print(" " + s);
-        }
-        for (String s : compYear2) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" CHEM351L\n");
-        for (String s : compYear3) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" CMPE323 CMPE330\n");
-        for (String s : compYear4) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" CMSC421\n");
+        compFourYearPlan("\n","\n"," CMPE323 CMPE330\n"," CMSC421\n");
     }
     public static void computerCybersecurity() {
-        System.out.println("Here is your 4 Year Plan!");
-        for (String s : compYear1) {
-            System.out.print(" " + s);
-        }
-        for (String s : compYear2) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" CHEM351L\n");
-        for (String s : compYear3) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" CMSC421 CMPE415\n");
-        for (String s : compYear4) {
-            System.out.print(" " + s);
-        }
-        System.out.print(" CMPE315 CMSC426 CMSC481\n");
+        compFourYearPlan("\n","\n"," CMSC421 CMPE415\n"," CMPE315 CMSC426 CMSC481\n");
     }
 
     public static void mechanical() {
@@ -155,7 +104,7 @@ public class Engineering {
     }
 
     public static final String[] chemYear1 = {"Year 1:", "CHEM101", "MATH 151", "ENES101",
-            "CHEM102", "CHEM102L", "PHYS121", "MATH152", "ENME110\n"};
+            "CHEM102", "CHEM102L", "PHYS121", "MATH152"};
     public static final String[] chemYear2 = {"Year 2:","ENCH215","CHEM351","MATH251"
             ,"ENCH225L","MATH225","PHYS122"};
     public static final String[] chemYear3 = {"Year 3:","ENCH300","ENCH425","ENCH427","ENCH440",
@@ -163,7 +112,7 @@ public class Engineering {
     public static final String[] chemYear4 = {"Year 4:","ENCH444", "ENCH445","ENCH446"};
     public static final String[] compYear1 = {"Year 1:","CMSC201","CMSC202","PHYS121",
             "MATH151","MATH152","CMPE212","ENES101"};
-    public static final String[] compYear2 = {"\n Year 2:","MATH251","PHYS122","CMSC203",
+    public static final String[] compYear2 = {"Year 2:","MATH251","PHYS122","CMSC203",
             "CMPE306L","MATH225","CMPE310","CMSC341"};
     public static final String[] compYear3 = {"Year 3:","CMPE314","CMPE311","MATH221",
             "CMPE320","CMPE349"};
