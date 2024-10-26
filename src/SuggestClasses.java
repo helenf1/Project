@@ -5,22 +5,24 @@ public class SuggestClasses {
     // main choice thing
     public static void main(String[] args) {
         // maybe will ask this somewhere else but wanted to make this section functional vv
-        System.out.println("What is your major? Please write it in full using title caps. (ex. Biochemistry and Molecular Biology)");
+        System.out.println("What is your major? Please write it in full (ex. Biochemistry and Molecular Biology)");
         Scanner input = new Scanner(System.in);
         String major = input.nextLine();
+        majorCases(major);
+    }
 
-        switch (major) {
-            case "Information Systems", "Information systems", "information systems", "IS", "is" -> informationSystems();
-            case "Computer Science", "computer science", "Computer science" -> computerScience();
-            case "Biochemistry", "biochemistry", "Biochemistry and Molecular Biology", "biochemistry and molecular biology" -> bioChemistry();
-            case "Bioinformatics", "Bioinformatics and Computational Biology" -> bioInformatics();
-            case "Biology", "Biological Sciences", "Biological sciences" -> biologicalSciences();
+    public static void majorCases(String major) {
+        String majorLowercase = major.toLowerCase();
+        switch (majorLowercase) {
+            case "information systems", "is" -> informationSystems();
+            case "computer science", "compsci" -> computerScience();
+            case "biology" -> biologicalSciences();
             default -> System.out.println("Invalid major.");
             // etc. for all the majors
         }
         generalEducation();
-    }
 
+    }
 
     public static void informationSystems() {
         System.out.println("As an Information Systems major, here are the major classes you can take with no prerequisites:");
