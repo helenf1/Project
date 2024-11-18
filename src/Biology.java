@@ -1,9 +1,6 @@
 import java.util.Scanner;
 
 public class Biology {
-    public static void main (String[] args){
-        askTrack();
-    }
 
     public static void askTrack() {
         System.out.println("Which kind of biology are you? \n1: Biological Sciences B.A \n2: Biological Sciences B.S \n3: Biology Education");

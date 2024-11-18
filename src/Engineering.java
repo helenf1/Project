@@ -1,9 +1,6 @@
 import java.util.Scanner;
 
 public class Engineering {
-    public static void main(String[] args) {
-        askTrack();
-    }
 
     public static void askTrack() {
         System.out.print("Which kind of engineering are you? \n1: Chemical\n2: Computer \n3: Mechanical\n");

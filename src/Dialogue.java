@@ -31,10 +31,10 @@ public class Dialogue {
                 SuggestClasses newStudent = new SuggestClasses(input.nextLine());
                 break;
             case "2":
-
+                SuggestMajor.suggest();
                 break;
             case "3":
-                //call case 3 code
+
                 break;
             case "4":
                 // call case 0 code

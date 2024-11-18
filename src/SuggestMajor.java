@@ -2,10 +2,6 @@ import java.util.Scanner;
 
 public class SuggestMajor {
 
-    public static void main(String[] args) {
-        suggest();
-    }
-
     public static void suggest() {
         Scanner input = new Scanner(System.in);
 

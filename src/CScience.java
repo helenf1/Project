@@ -6,15 +6,6 @@ import java.util.Scanner;
 public class CScience {
 
     /**
-     * The main method that starts the program.
-     *
-     * @param args command-line arguments (not used in this program)
-     */
-    public static void main(String[] args) {
-        askTrack();
-    }
-
-    /**
      * Prompts the user to select a Computer Science pathway and calls the appropriate method.
      */
     public static void askTrack() {
