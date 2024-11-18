@@ -2,13 +2,19 @@ import java.util.Scanner;
 
 public class SuggestClasses {
 
-    // main choice thing
-    public static void main(String[] args) {
-        // maybe will ask this somewhere else but wanted to make this section functional vv
-        System.out.println("What is your major? (ex: Computer Science)");
-        Scanner input = new Scanner(System.in);
-        String major = input.nextLine();
+    private String major;
+
+    public SuggestClasses(){
+        System.out.println("Please choose a major! If undecided, use our Suggest Major feature!");
+    }
+
+    public SuggestClasses(String major){
+        this.major = major;
         majorCases(major);
+    }
+
+    public String getMajor(){
+        return major;
     }
 
     public static void majorCases(String major) {
