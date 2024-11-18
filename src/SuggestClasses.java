@@ -15,7 +15,7 @@ public class SuggestClasses {
         String majorLowercase = major.toLowerCase();
         switch (majorLowercase) {
             case "engineering" -> Engineering.main(null);
-            case "computer science", "compsci" -> ComputerScience.main(null);
+            case "computer science", "compsci" -> System.out.println("hi");
             case "biology" -> Biology.main(null);
             case "information systems","is" -> informationSystems();
             case "chemistry" -> chemistry();
