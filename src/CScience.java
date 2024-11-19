@@ -3,19 +3,37 @@ import java.util.Scanner;
 /**
  * A program to display a 4-year plan based on a selected Computer Science pathway.
  */
-public class CScience {
-
+public class CScience extends SuggestClasses {
+    private int type;
     /**
      * Prompts the user to select a Computer Science pathway and calls the appropriate method.
      */
-    public static void askTrack() {
+
+    public CScience(){
+        super("compsci");
+        this.type = 0;
+    }
+
+    public CScience(String major){
+        super(major);
+        this.type = 0;
+    }
+
+    @Override
+    public void setType() {
         System.out.print("Which pathway are you most interested in taking?\n" +
-                "1. AI\n2. Cyber Security\n3. Data Science\n4. Game Development\n5. Standard\n");
-
+                "1: AI\n2: Cyber Security\n3: Data Science\n4: Game Development\n5: Standard\n");
         Scanner input = new Scanner(System.in);
-        int type = input.nextInt();
+        this.type = input.nextInt();
+    }
 
-        switch (type) {
+    public int getType() {
+        return type;
+    }
+
+    @Override
+    public void printClasses() {
+        switch (this.type) {
             case 1 -> ai();
             case 2 -> cyber();
             case 3 -> data();
@@ -23,12 +41,15 @@ public class CScience {
             case 5 -> standard();
             default -> System.out.println("Please select one of the options above");
         }
+        for (String s : super.GENERALEDUCATION) {
+            System.out.print(s + '\n');
+        }
     }
 
     /**
      * Displays the 4-year plan for the AI pathway.
      */
-    public static void ai() {
+    public void ai() {
         System.out.println("This is your 4 year plan for AI:");
         System.out.println("Year 1: CMSC 201, CMSC 202, CMSC 203, MATH 151, MATH 152");
         System.out.println("Year 2: CMSC 331, CMSC 341, CMSC 313, Math 221");
@@ -39,7 +60,7 @@ public class CScience {
     /**
      * Displays the 4-year plan for the Cyber Security pathway.
      */
-    public static void cyber() {
+    public void cyber() {
         System.out.println("This is your 4 year plan for Cyber Security:");
         System.out.println("Year 1: CMSC 201, CMSC 202, CMSC 203, MATH 151, MATH 152");
         System.out.println("Year 2: CMSC 331, CMSC 341, CMSC 313, Math 221");
@@ -50,7 +71,7 @@ public class CScience {
     /**
      * Displays the 4-year plan for the Data Science pathway.
      */
-    public static void data() {
+    public void data() {
         System.out.println("This is your 4 year plan for Data Science:");
         System.out.println("Year 1: CMSC 201, CMSC 202, CMSC 203, MATH 151, MATH 152");
         System.out.println("Year 2: CMSC 331, CMSC 341, CMSC 313, Math 221");
@@ -61,7 +82,7 @@ public class CScience {
     /**
      * Displays the 4-year plan for the Game Development pathway.
      */
-    public static void game() {
+    public void game() {
         System.out.println("This is your 4 year plan for Game Development:");
         System.out.println("Year 1: CMSC 201, CMSC 202, CMSC 203, MATH 151, MATH 152");
         System.out.println("Year 2: CMSC 331, CMSC 341, CMSC 313, Math 221");
@@ -72,7 +93,7 @@ public class CScience {
     /**
      * Displays the 4-year plan for the Standard Computer Science pathway.
      */
-    public static void standard() {
+    public void standard() {
         System.out.println("This is your 4 year plan for Computer Science:");
         System.out.println("Year 1: CMSC 201, CMSC 202, CMSC 203, MATH 151, MATH 152");
         System.out.println("Year 2: CMSC 331, CMSC 341, CMSC 313, Math 221");

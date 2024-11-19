@@ -1,12 +1,33 @@
 import java.util.Scanner;
 
-public class Biology {
+public class Biology extends SuggestClasses {
 
-    public static void askTrack() {
+    private int type;
+
+    public Biology(){
+        super("biology");
+        this.type = 0;
+    }
+
+    public Biology(String major){
+        super(major);
+        this.type = 0;
+    }
+
+    @Override
+    public void setType() {
         System.out.println("Which kind of biology are you? \n1: Biological Sciences B.A \n2: Biological Sciences B.S \n3: Biology Education");
         Scanner input = new Scanner(System.in);
-        int type = input.nextInt();
-        switch (type) {
+        this.type = input.nextInt();
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    @Override
+    public void printClasses(){
+        switch (this.type) {
             case 1 -> bioScienceBA();
             case 2 -> bioScienceBS();
             case 3 -> bioEdu();
@@ -14,9 +35,12 @@ public class Biology {
             //case 5 -> bioinform();
             default -> System.out.println("Invalid option.");
         }
+        for (String s : super.GENERALEDUCATION) {
+            System.out.print(s + '\n');
+        }
     }
 
-    public static void bioScienceBA() {
+    public void bioScienceBA() {
         System.out.print("Which track are you on? \n1: Pre-Med\n2: Pre-Nursing \n3: Pre-Dental\n");
         Scanner input = new Scanner(System.in);
         int type = input.nextInt();
@@ -26,6 +50,26 @@ public class Biology {
             case 3 -> bioFourYearPlan(" BIO300L\n"," PHYS122l\n"," CHEM352 CHEM352L\n"," BIOL430 CHEM 437\n");
             default -> System.out.println("Invalid option.");
         }
+    }
+
+    public void bioScienceBS() {
+        System.out.print("Which track are you on? \n1: Pre-Med\n2: Pre-PA \n3: Pre-Nursing\n");
+        Scanner input = new Scanner(System.in);
+        int type = input.nextInt();
+        switch (type) {
+            case 1 -> bioFourYearPlan("\n","\n"," CMSC421 CMPE415\n"," CMSC421 CMPE315\n");
+            case 2 -> bioFourYearPlan("\n","\n"," CMPE323 CMPE330\n"," CMSC421\n");
+            case 3 -> bioFourYearPlan("\n","\n"," CMSC421 CMPE415\n"," CMPE315 CMSC426 CMSC481\n");
+            default -> System.out.println("Invalid option.");
+        }
+    }
+
+    public void bioEdu() {
+        System.out.println("Here is your 4 year plan!");
+        System.out.println(" Year 1: BIO141 MATH155 PSYC100 BIOL142 CHEM101 GES110");
+        System.out.println(" Year 2: BIOL302 CHEM102 PSYC210 EDUC310 BIOL303 BIOL397 CHEM102L PHYS111 EDUC311");
+        System.out.println(" Year 3: BIOL300L CHEM351 PHYS112 STAT350 EDUC412 EDUC388 EDUC410");
+        System.out.println(" Year 4: BIOL302L EDUC427 EDUC411 GES311 EDUC456 EDUC457");
     }
 
     public static void bioFourYearPlan(String year1Add, String year2Add, String year3Add, String year4Add){
@@ -47,45 +91,6 @@ public class Biology {
         }
         System.out.print(year4Add);
 
-    }
-
-    public static void bioScienceBS() {
-        System.out.print("Which track are you on? \n1: Pre-Med\n2: Pre-PA \n3: Pre-Nursing\n");
-        Scanner input = new Scanner(System.in);
-        int type = input.nextInt();
-        switch (type) {
-            case 1 -> bioFourYearPlan("\n","\n"," CMSC421 CMPE415\n"," CMSC421 CMPE315\n");
-            case 2 -> bioFourYearPlan("\n","\n"," CMPE323 CMPE330\n"," CMSC421\n");
-            case 3 -> bioFourYearPlan("\n","\n"," CMSC421 CMPE415\n"," CMPE315 CMSC426 CMSC481\n");
-            default -> System.out.println("Invalid option.");
-        }
-    }
-    public static void bioFourYearPlan1(String year1Add, String year2Add, String year3Add, String year4Add){
-        System.out.println("Here is your 4 Year Plan!");
-        for (String s : bioBAYear1) {
-            System.out.print(" " + s);
-        }
-        System.out.print(year1Add);
-        for (String s : bioBAYear2) {
-            System.out.print(" " + s);
-        }
-        System.out.print(year2Add);
-        for (String s : bioBAYear3) {
-            System.out.print(" " + s);
-        }
-        System.out.print(year3Add);
-        for (String s : bioBAYear4) {
-            System.out.print(" " + s);
-        }
-        System.out.print(year4Add);
-    }
-
-    public static void bioEdu() {
-        System.out.println("Here is your 4 year plan!");
-        System.out.println(" Year 1: BIO141 MATH155 PSYC100 BIOL142 CHEM101 GES110");
-        System.out.println(" Year 2: BIOL302 CHEM102 PSYC210 EDUC310 BIOL303 BIOL397 CHEM102L PHYS111 EDUC311");
-        System.out.println(" Year 3: BIOL300L CHEM351 PHYS112 STAT350 EDUC412 EDUC388 EDUC410");
-        System.out.println(" Year 4: BIOL302L EDUC427 EDUC411 GES311 EDUC456 EDUC457");
     }
 
     private static final String[] bioYear1 = {"Year 1:", "CHEM101", "MATH151", "ENGL GEP",

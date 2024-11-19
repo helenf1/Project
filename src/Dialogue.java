@@ -12,6 +12,7 @@ public class Dialogue {
     }
 
     public static String introduction() {
+        System.out.println("--------------------------------------------------");
         System.out.println("Hello! Welcome to our college planning program.");
         System.out.println("Which option would you like to explore?");
         System.out.println(" 1: Suggest classes based on major");
@@ -26,9 +27,7 @@ public class Dialogue {
         switch (choice) {
             case "1":
                 //suggest classes case
-                System.out.println("What is your major? (ex: Engineering)");
-                Scanner input = new Scanner(System.in);
-                SuggestClasses newStudent = new SuggestClasses(input.nextLine());
+                majorCases();
                 break;
             case "2":
                 SuggestMajor.suggest();
@@ -45,5 +44,32 @@ public class Dialogue {
                 break;
         }
 
+    }
+
+    public static void majorCases(){
+        System.out.println("What is your major? (ex: Engineering)");
+        Scanner input = new Scanner(System.in);
+        String unMajor = input.nextLine();
+        String major = unMajor.toLowerCase();
+        switch (major) {
+            case "engineering":
+                Engineering engineeringStudent = new Engineering(major);
+                engineeringStudent.setType();
+                engineeringStudent.printClasses();
+                break;
+            case "computer science", "compsci":
+                CScience compSciStudent = new CScience(major);
+                compSciStudent.setType();
+                compSciStudent.printClasses();
+                break;
+            case "biology":
+                Biology bioStudent = new Biology();
+                bioStudent.setType();
+                bioStudent.printClasses();
+                break;
+            default:
+                SuggestClasses genStudent = new SuggestClasses(major);
+                genStudent.printClasses();
+        }
     }
 }
