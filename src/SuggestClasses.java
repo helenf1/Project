@@ -15,7 +15,7 @@ public class SuggestClasses {
     }
 
     public String getMajor(){
-        return this.major;
+        return "Your major is" + this.major;
     }
 
     public void setType(){

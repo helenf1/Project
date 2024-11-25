@@ -31,8 +31,6 @@ public class Biology extends SuggestClasses {
             case 1 -> bioScienceBA();
             case 2 -> bioScienceBS();
             case 3 -> bioEdu();
-            //case 4 -> biochem();
-            //case 5 -> bioinform();
             default -> System.out.println("Invalid option.");
         }
         for (String s : super.GENERALEDUCATION) {

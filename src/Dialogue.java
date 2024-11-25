@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Date;
 
 public class Dialogue {
 
@@ -12,8 +13,10 @@ public class Dialogue {
     }
 
     public static String introduction() {
+        Date currentDate = new Date();
+        int year = currentDate.getYear() +1900;
         System.out.println("--------------------------------------------------");
-        System.out.println("Hello! Welcome to our college planning program.");
+        System.out.println("Hello! Welcome to our " + year + "/" + (year-1999) + " college planning program.");
         System.out.println("Which option would you like to explore?");
         System.out.println(" 1: Suggest classes based on major");
         System.out.println(" 2: Suggest major based on interests");
@@ -32,17 +35,16 @@ public class Dialogue {
                 SuggestMajor.suggest();
                 break;
             case "3":
-
+                SuggestResources.suggest();
                 break;
             case "4":
-                // call case 0 code
                 repeat = 0;
                 break;
             default:
                 System.out.println("Invalid choice. To use this program, type option 1,2, or 3; to exit, enter 4.");
                 break;
         }
-
+        System.out.println("Thank you for using our program!");
     }
 
     public static void majorCases(){

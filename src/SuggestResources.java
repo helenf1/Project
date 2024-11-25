@@ -119,7 +119,7 @@ public class SuggestResources {
             System.out.println("Thank you for using our program!");
         } else {
             System.out.println("Invalid input. Please type 'y' to continue or 'n' to exit.");
-            promptContinue(); .
+            promptContinue();
         }
     }
 }
