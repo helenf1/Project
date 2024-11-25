@@ -1,20 +1,18 @@
 import java.util.Scanner;
-
-// A class to suggest campus resources based on the user's needs or interests.
  
 public class SuggestResources {
 
-    
-     // Suggests campus resources based on the user's input.
-  
+    // Suggests campus resources based on the user's input.
+     
     public static void suggest() {
         System.out.println("--------------------------------------------------");
         System.out.println("Which campus resource would you like to learn about?");
-        System.out.println("1: Academic Support (tutoring, workshops)");
+        System.out.println("1: Academic Support (tutoring, workshops, SI Pass)");
         System.out.println("2: Career Services (internships, job fairs)");
         System.out.println("3: Mental Health & Wellness (counseling, workshops)");
         System.out.println("4: Clubs & Organizations (student life, networking)");
-        System.out.println("5: Quit");
+        System.out.println("5: Finding Your Academic Advisor on myUMBC");
+        System.out.println("6: Quit");
         System.out.println("--------------------------------------------------");
 
         Scanner input = new Scanner(System.in);
@@ -34,11 +32,14 @@ public class SuggestResources {
                 clubsAndOrganizations();
                 break;
             case "5":
+                findAdvisor();
+                break;
+            case "6":
                 System.out.println("Thank you for using the program!");
                 break;
             default:
                 System.out.println("Invalid choice, please select a valid option.");
-                suggest();  // Prompt again if the input is invalid
+                suggest();  
         }
     }
 
@@ -50,13 +51,13 @@ public class SuggestResources {
         System.out.println(" - Writing Center: Get help with writing assignments.");
         System.out.println(" - Workshops: Attend academic skill workshops (e.g., time management, study skills).");
         System.out.println(" - Peer Study Groups: Join or form study groups with fellow students.");
-        System.out.println(" - Faculty Office Hours: Meet with professors during their scheduled office hours.");
+        System.out.println(" - SI Pass (Supplemental Instruction): Group study sessions for difficult courses.");
         System.out.println("\nWould you like to explore another resource? (y/n)");
         promptContinue();
     }
 
     // Provides information on career services.
-     
+    
     public static void careerServices() {
         System.out.println("Career Services Resources include:");
         System.out.println(" - Internship Opportunities: Assistance in finding internships in various fields.");
@@ -94,8 +95,20 @@ public class SuggestResources {
         promptContinue();
     }
 
+    // Provides instructions on how to find your academic advisor on myUMBC.
+     
+    public static void findAdvisor() {
+        System.out.println("To find your academic advisor on myUMBC, follow these steps:");
+        System.out.println("1. Log in to your myUMBC account.");
+        System.out.println("2. Navigate to your profile.");
+        System.out.println("3. Under 'Academic Advisor', you will find the name and contact information for your academic advisor.");
+        System.out.println("4. You can schedule an appointment through myUMBC, or reach out via email for advice.");
+        System.out.println("\nWould you like to explore another resource? (y/n)");
+        promptContinue();
+    }
+
     // Prompt the user to continue or exit after viewing a resource.
-  
+     
     public static void promptContinue() {
         Scanner input = new Scanner(System.in);
         String continueChoice = input.nextLine();
@@ -106,7 +119,7 @@ public class SuggestResources {
             System.out.println("Thank you for using our program!");
         } else {
             System.out.println("Invalid input. Please type 'y' to continue or 'n' to exit.");
-            promptContinue();  // Repeat prompt if invalid input.
+            promptContinue(); .
         }
     }
 }
