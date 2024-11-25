@@ -26,7 +26,6 @@ public class Dialogue {
     public static void pathChosen(String choice) {
         switch (choice) {
             case "1":
-                //suggest classes case
                 majorCases();
                 break;
             case "2":
@@ -53,17 +52,17 @@ public class Dialogue {
         String major = unMajor.toLowerCase();
         switch (major) {
             case "engineering":
-                Engineering engineeringStudent = new Engineering(major);
+                SuggestClasses engineeringStudent = new Engineering(major);
                 engineeringStudent.setType();
                 engineeringStudent.printClasses();
                 break;
             case "computer science", "compsci":
-                CScience compSciStudent = new CScience(major);
+                SuggestClasses compSciStudent = new CScience(major);
                 compSciStudent.setType();
                 compSciStudent.printClasses();
                 break;
             case "biology":
-                Biology bioStudent = new Biology();
+                SuggestClasses bioStudent = new Biology();
                 bioStudent.setType();
                 bioStudent.printClasses();
                 break;

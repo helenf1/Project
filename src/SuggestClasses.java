@@ -30,7 +30,7 @@ public class SuggestClasses {
             case "physics" -> printPhysics();
             case "psychology" -> printPsychology();
             case "statistics" -> printStatistics();
-            default -> System.out.println("Invalid major.");
+            default -> System.out.println("Invalid major. Please write the general name of your major.");
         }
         for (String s : GENERALEDUCATION) {
             System.out.print(s + '\n');
