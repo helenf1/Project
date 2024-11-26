@@ -44,7 +44,6 @@ public class Dialogue {
                 System.out.println("Invalid choice. To use this program, type option 1,2, or 3; to exit, enter 4.");
                 break;
         }
-        System.out.println("Thank you for using our program!");
     }
 
     public static void majorCases(){

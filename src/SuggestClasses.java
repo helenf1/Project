@@ -93,6 +93,66 @@ public class SuggestClasses {
         System.out.println(" Year 4: STAT433 SPCH100 STAT Upper-Level Electives");
     }
 
+    public static void fourYearPlan(String[][] fourYearPlan, String year1Add, String year2Add, String year3Add, String year4Add){
+        System.out.println("Here is your 4 Year Plan!");
+        for (String s : fourYearPlan[0]) {
+            System.out.print(" " + s);
+        }
+        System.out.print(year1Add);
+        for (String s : fourYearPlan[1]) {
+            System.out.print(" " + s);
+        }
+        System.out.print(year2Add);
+        for (String s : fourYearPlan[2]) {
+            System.out.print(" " + s);
+        }
+        System.out.print(year3Add);
+        for (String s : fourYearPlan[3]) {
+            System.out.print(" " + s);
+        }
+        System.out.print(year4Add);
+    }
+
+    public static void fourYearPlan(String[][] fourYearPlan, String year3Add, String year4Add){
+        System.out.println("Here is your 4 Year Plan!");
+        for (String s : fourYearPlan[0]) {
+            System.out.print(" " + s);
+        }
+        System.out.print("\n");
+        for (String s : fourYearPlan[1]) {
+            System.out.print(" " + s);
+        }
+        System.out.print("\n");
+        for (String s : fourYearPlan[2]) {
+            System.out.print(" " + s);
+        }
+        System.out.print(year3Add);
+        for (String s : fourYearPlan[3]) {
+            System.out.print(" " + s);
+        }
+        System.out.print(year4Add);
+    }
+
+    public static void fourYearPlan(String[][] fourYearPlan, String year1Add, String year2Add, String year3Add){
+        System.out.println("Here is your 4 Year Plan!");
+        for (String s : fourYearPlan[0]) {
+            System.out.print(" " + s);
+        }
+        System.out.print(year1Add);
+        for (String s : fourYearPlan[1]) {
+            System.out.print(" " + s);
+        }
+        System.out.print(year2Add);
+        for (String s : fourYearPlan[2]) {
+            System.out.print(" " + s);
+        }
+        System.out.print(year3Add);
+        for (String s : fourYearPlan[3]) {
+            System.out.print(" " + s);
+        }
+        System.out.print("\n");
+    }
+
     protected final String[] GENERALEDUCATION = {
             "In addition, these are the General Education requirements as a UMBC student:",
             " English Composition: Completion of English 100 or equivalent course",

@@ -43,26 +43,6 @@ public class Engineering extends SuggestClasses{
         }
     }
 
-    public static void fourYearPlan(String[][] fourYearPlan, String year1Add, String year2Add, String year3Add, String year4Add){
-        System.out.println("Here is your 4 Year Plan!");
-        for (String s : fourYearPlan[0]) {
-            System.out.print(" " + s);
-        }
-        System.out.print(year1Add);
-        for (String s : fourYearPlan[1]) {
-            System.out.print(" " + s);
-        }
-        System.out.print(year2Add);
-        for (String s : fourYearPlan[2]) {
-            System.out.print(" " + s);
-        }
-        System.out.print(year3Add);
-        for (String s : fourYearPlan[3]) {
-            System.out.print(" " + s);
-        }
-        System.out.print(year4Add);
-    }
-
     public void printChemical() {
         System.out.print("Which track are you on? \n1: Traditional\n2: Biotechnology/Bioengineering \n3: Environmental Engineering & Sustainability\n");
         Scanner input = new Scanner(System.in);
@@ -80,9 +60,9 @@ public class Engineering extends SuggestClasses{
         Scanner input = new Scanner(System.in);
         this.track = input.nextInt();
         switch (this.track) {
-            case 1 -> fourYearPlan(compPlan,"\n","\n"," CMSC421 CMPE415\n"," CMSC421 CMPE315\n");
-            case 2 -> fourYearPlan(compPlan,"\n","\n"," CMPE323 CMPE330\n"," CMSC421\n");
-            case 3 -> fourYearPlan(compPlan,"\n","\n"," CMSC421 CMPE415\n"," CMPE315 CMSC426 CMSC481\n");
+            case 1 -> fourYearPlan(compPlan," CMSC421 CMPE415\n"," CMSC421 CMPE315\n");
+            case 2 -> fourYearPlan(compPlan," CMPE323 CMPE330\n"," CMSC421\n");
+            case 3 -> fourYearPlan(compPlan," CMSC421 CMPE415\n"," CMPE315 CMSC426 CMSC481\n");
             default -> System.out.println("Invalid option.");
         }
     }
