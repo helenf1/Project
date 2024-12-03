@@ -33,7 +33,7 @@ public class SuggestMajor {
 
     public static String getUserInterest() {
         Scanner input = new Scanner(System.in);
-        System.out.print("\nWhat type of subjects or classes are you most interested in: Math, English, Science, Social Studies, or something else? ");
+        System.out.print("\nWhat type of subjects or classes are you most interested in: Math, English, Science, Social Studies, or something else? \n");
         return input.nextLine().toLowerCase();
     }
 

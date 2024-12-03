@@ -47,7 +47,7 @@ public class Dialogue {
     }
 
     public static void majorCases(){
-        System.out.println("What is your major? (ex: Engineering)");
+        System.out.println("What is your major? (Please choose one in STEM; ex: Engineering)");
         Scanner input = new Scanner(System.in);
         String unMajor = input.nextLine();
         String major = unMajor.toLowerCase();
