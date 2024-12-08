@@ -1,9 +1,36 @@
 import java.util.Scanner;
- 
+
+/**
+ * The {@code SuggestResources} class provides information about various
+ * campus resources based on user input.
+ * <p>
+ * This class allows users to learn about available campus services, such as
+ * academic support, career services, mental health resources, student organizations,
+ * and locating academic advisors. The user is presented with a menu of options
+ * and their selection is processed to provide more detailed information.
+ * </p>
+ */
 public class SuggestResources {
 
-    // Suggests campus resources based on the user's input.
-     
+    /**
+     * Displays a menu of campus resources and processes the user's selection.
+     * <p>
+     * This method provides a menu of campus resources, prompting the user to select an
+     * option by entering a number. Based on the user's input, the corresponding method is
+     * called to provide details about the selected resource. If the user enters an invalid
+     * option, the menu is displayed again.
+     * </p>
+     *
+     * <p>Options:</p>
+     * <ul>
+     *   <li>1: Academic Support</li>
+     *   <li>2: Career Services</li>
+     *   <li>3: Mental Health & Wellness</li>
+     *   <li>4: Clubs & Organizations</li>
+     *   <li>5: Finding Your Academic Advisor</li>
+     *   <li>6: Quit the program</li>
+     * </ul>
+     */
     public static void suggest() {
         System.out.println("--------------------------------------------------");
         System.out.println("Which campus resource would you like to learn about?");
@@ -43,8 +70,15 @@ public class SuggestResources {
         }
     }
 
-    // Provides information on academic support resources.
-     
+    /**
+     * Displays information about academic support resources.
+     * <p>
+     * This method provides a detailed list of academic support resources available to students,
+     * including tutoring services, the writing center, workshops, peer study groups, and SI Pass
+     * (Supplemental Instruction). After displaying the information, it prompts the user to decide
+     * whether to explore another resource.
+     * </p>
+     */
     public static void academicSupport() {
         System.out.println("Academic Support Resources include:");
         System.out.println(" - Tutoring Services: Available for various subjects.");
@@ -56,8 +90,15 @@ public class SuggestResources {
         promptContinue();
     }
 
-    // Provides information on career services.
-    
+    /**
+     * Displays information about career services resources.
+     * <p>
+     * This method provides a detailed list of career services resources available to students,
+     * including internship opportunities, job fairs, resume assistance, career counseling,
+     * and networking events. After displaying the information, it prompts the user to decide
+     * whether to explore another resource.
+     * </p>
+     */
     public static void careerServices() {
         System.out.println("Career Services Resources include:");
         System.out.println(" - Internship Opportunities: Assistance in finding internships in various fields.");
@@ -69,8 +110,15 @@ public class SuggestResources {
         promptContinue();
     }
 
-    // Provides information on mental health and wellness resources.
-    
+    /**
+     * Displays information about mental health and wellness resources.
+     * <p>
+     * This method provides a detailed list of mental health and wellness resources
+     * available to students, including counseling services, stress management workshops,
+     * wellness events, support groups, and emergency services. After displaying the
+     * information, it prompts the user to decide whether to explore another resource.
+     * </p>
+     */
     public static void mentalHealthWellness() {
         System.out.println("Mental Health & Wellness Resources include:");
         System.out.println(" - Counseling Services: Individual or group counseling for emotional support.");
@@ -82,8 +130,16 @@ public class SuggestResources {
         promptContinue();
     }
 
-    // Provides information on clubs and student organizations.
-     
+    /**
+     * Displays information about clubs and organizations resources.
+     * <p>
+     * This method provides a detailed list of resources related to clubs and organizations
+     * available to students, including opportunities to join student government, academic
+     * clubs, cultural organizations, volunteer projects, and special interest groups.
+     * After displaying the information, it prompts the user to decide whether to explore
+     * another resource.
+     * </p>
+     */
     public static void clubsAndOrganizations() {
         System.out.println("Clubs & Organizations Resources include:");
         System.out.println(" - Student Government: Get involved in shaping student policies and events.");
@@ -95,8 +151,16 @@ public class SuggestResources {
         promptContinue();
     }
 
-    // Provides instructions on how to find your academic advisor on myUMBC.
-     
+    /**
+     * Provides instructions for finding an academic advisor on myUMBC.
+     * <p>
+     * This method outlines the steps to locate the name and contact information
+     * of an academic advisor through the myUMBC platform. It also informs users
+     * about scheduling an appointment or reaching out via email for guidance.
+     * After displaying the information, it prompts the user to decide whether to
+     * explore another resource.
+     * </p>
+     */
     public static void findAdvisor() {
         System.out.println("To find your academic advisor on myUMBC, follow these steps:");
         System.out.println("1. Log in to your myUMBC account.");
@@ -107,8 +171,16 @@ public class SuggestResources {
         promptContinue();
     }
 
-    // Prompt the user to continue or exit after viewing a resource.
-     
+    /**
+     * Prompts the user to decide whether to continue exploring resources.
+     * <p>
+     * This method asks the user if they would like to explore more campus resources.
+     * If the user inputs "y" (yes), the program redisplays the resource menu by calling
+     * the {@code suggest} method. If the user inputs "n" (no), the program ends with
+     * a thank-you message. For invalid inputs, the method recursively prompts the user
+     * until a valid response is provided.
+     * </p>
+     */
     public static void promptContinue() {
         Scanner input = new Scanner(System.in);
         String continueChoice = input.nextLine();
